@@ -3,7 +3,7 @@
 @{
 }
 <h2>Are you sure you want to delete this employee?</h2>
-<<div>
+<div>
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.employee.Name)
@@ -17,11 +17,17 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.employee.Surname)
         </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.employee.Salary)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.employee.Salary)
+        </dd>
     </dl>
 
     <form method="post">
         <input type="hidden" asp-for="employee.Id" />
         <input type="submit" value="Delete" class="btn btn-danger" /><br />
-        <a asp-page="./Index">Back to List</a>
+        <a button type="button" class="btn btn-primary" asp-page="./Index">Back to List</a>
     </form>
 </div>
